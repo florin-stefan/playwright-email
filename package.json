@@ -20,11 +20,11 @@
   "author": "Stefan Florin <stefan.florin95@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fofo95/playwright-email.git"
+    "url": "git+https://github.com/florin-stefan/playwright-email.git"
   },
-  "homepage": "https://github.com/fofo95/playwright-email#readme",
+  "homepage": "https://github.com/florin-stefan/playwright-email#readme",
   "bugs": {
-    "url": "https://github.com/fofo95/playwright-email/issues"
+    "url": "https://github.com/florin-stefan/playwright-email/issues"
   },
   "type": "module",
   "bin": {

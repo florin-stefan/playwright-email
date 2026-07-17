@@ -1,6 +1,6 @@
 # playwright-email
 
-[![CI](https://github.com/fofo95/playwright-email/actions/workflows/ci.yml/badge.svg)](https://github.com/fofo95/playwright-email/actions/workflows/ci.yml)
+[![CI](https://github.com/florin-stefan/playwright-email/actions/workflows/ci.yml/badge.svg)](https://github.com/florin-stefan/playwright-email/actions/workflows/ci.yml)
 [![npm](https://img.shields.io/npm/v/playwright-email)](https://www.npmjs.com/package/playwright-email)
 [![license](https://img.shields.io/npm/l/playwright-email)](./LICENSE)
 
@@ -266,7 +266,7 @@ Behind a corporate proxy, use a mirror or `PLAYWRIGHT_EMAIL_BINARY` (Node's `fet
 
 - Amazon SES / Mailgun shims for the provider mock
 - First-class helpers for email visual regression baselines
-- Suggest something → [open a feature request](https://github.com/fofo95/playwright-email/issues)
+- Suggest something → [open a feature request](https://github.com/florin-stefan/playwright-email/issues)
 
 ## License
 
