@@ -1,0 +1,82 @@
+{
+  "name": "playwright-email",
+  "version": "0.3.0",
+  "description": "Zero-config email testing for Playwright: signup verification, password reset, magic links, email OTP and TOTP 2FA — powered by an auto-managed Mailpit instance.",
+  "keywords": [
+    "playwright",
+    "playwright-test",
+    "email",
+    "email-testing",
+    "otp",
+    "2fa",
+    "totp",
+    "magic-link",
+    "mailpit",
+    "smtp",
+    "e2e",
+    "fixtures"
+  ],
+  "license": "MIT",
+  "author": "Stefan Florin <stefan.florin95@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fofo95/playwright-email.git"
+  },
+  "homepage": "https://github.com/fofo95/playwright-email#readme",
+  "bugs": {
+    "url": "https://github.com/fofo95/playwright-email/issues"
+  },
+  "type": "module",
+  "bin": {
+    "playwright-email": "./dist/cli.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./global-setup": {
+      "types": "./dist/global-setup.d.ts",
+      "import": "./dist/global-setup.js",
+      "require": "./dist/global-setup.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test",
+    "test:example": "playwright test -c examples/signup-app/playwright.config.ts",
+    "test": "npm run test:unit && npm run test:e2e && npm run test:example",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run typecheck && npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@playwright/test": ">=1.40.0"
+  },
+  "dependencies": {
+    "otpauth": "^9.5.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.1",
+    "@types/nodemailer": "^8.0.1",
+    "nodemailer": "^9.0.3",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.10"
+  }
+}

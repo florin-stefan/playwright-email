@@ -1,0 +1,21 @@
+name: Feature request
+description: Suggest a capability the package should have
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What email-testing pain are you hitting?
+      description: Describe the flow you're trying to test and where the package falls short.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed API (optional)
+      description: What would the test code ideally look like?
+      render: TypeScript
+  - type: input
+    id: workaround
+    attributes:
+      label: Current workaround (if any)

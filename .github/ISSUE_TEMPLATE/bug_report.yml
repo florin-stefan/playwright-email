@@ -1,0 +1,37 @@
+name: Bug report
+description: Something doesn't work as documented
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Include the full error message — playwright-email errors try hard to be self-explanatory, so paste them verbatim.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: A failing test + the relevant playwright.config.ts snippet. How does your app send mail (SMTP port from env? provider SDK)?
+      render: TypeScript
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      placeholder: "playwright-email 0.3.0, @playwright/test 1.61.1, Node 22, Windows 11"
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Server mode
+      options:
+        - Zero-config (per-worker spawn)
+        - Shared via global-setup
+        - External (PLAYWRIGHT_EMAIL_URL / docker-compose)
+        - Persistent CLI (playwright-email start)
+    validations:
+      required: true
